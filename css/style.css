@@ -1,0 +1,117 @@
+.search__container {
+    margin: 40px 0;
+    display: flex;
+}
+
+.search__field {
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    margin-right: 40px;
+    width: calc(100% - 40px);
+}
+
+.search__field::placeholder {
+    color: rgba(255, 255, 255, .8);
+}
+
+.search__button {
+    padding: 16px 40px;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.search__button:hover {
+    background-color: red;
+    color: white;
+    transition: 1s;
+}
+
+.card__container {
+    display: flex;
+}
+
+.card {
+    width: calc(var(--container-size) / 4 - 32px);
+    height: calc(var(--card-size) + 70px);
+    /* Soma-se 70px para exibir o nome do Pokémon */
+    border-radius: 9px;
+    position: relative;
+}
+
+.card__image {
+    width: 100%;
+    object-fit: contain;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.card__title {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 24px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    background-color: var(--card-title-background);
+}
+
+.card.orange {
+    background-color: var(--orange);
+}
+
+.card__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card.orange {
+    background-color: var(--orange);
+}
+
+.card.green {
+    background-color: var(--green);
+}
+
+.card.yellow {
+    background-color: var(--yellow);
+}
+
+.card.purple {
+    background-color: var(--purple);
+}
+
+.card.pink {
+    background-color: var(--pink);
+}
+
+@media only screen and (max-width: 600px) {
+    .card__container {
+        justify-content: center;
+    }
+
+    .search__button--mobile {
+        display: initial;
+        padding: 8px 12px;
+    }
+
+    .search__button {
+        display: none;
+    }
+
+    .search__field {
+        margin-right: 12px;
+    }
+}
